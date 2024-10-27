@@ -23,7 +23,7 @@ public class CalculatorView extends JFrame {
         gbc.insets = new Insets(5, 5, 5, 5);
 
         // Настройка шрифтов для меток
-        Font labelFont = new Font("arial", Font.BOLD, 20);  // Изменение шрифта для меток
+        Font labelFont = new Font("Arial", Font.BOLD, 20);  // Изменение шрифта для меток
         firstNumberLabel.setFont(labelFont);
         secondNumberLabel.setFont(labelFont);
         resultLabel.setFont(labelFont);
@@ -45,6 +45,27 @@ public class CalculatorView extends JFrame {
         subtractButton.setPreferredSize(buttonSize);
         multiplyButton.setPreferredSize(buttonSize);
         divideButton.setPreferredSize(buttonSize);
+
+        // Изменение цвета фона и текста
+        Color buttonColor = new Color(255, 174, 223); // Цвет кнопок
+        Color fieldColor = new Color(255, 238, 156, 255); // Цвет полей ввода
+        Color labelColor = Color.BLACK; // Цвет текста меток
+
+
+        // Изменение фона окна
+        getContentPane().setBackground(new Color(198, 235, 239)); // Установите нужный цвет фона
+
+
+        addButton.setBackground(buttonColor);
+        subtractButton.setBackground(buttonColor);
+        multiplyButton.setBackground(buttonColor);
+        divideButton.setBackground(buttonColor);
+
+
+        firstNumberField.setBackground(fieldColor);
+        secondNumberField.setBackground(fieldColor);
+        firstNumberField.setForeground(labelColor);
+        secondNumberField.setForeground(labelColor);
 
         // Первая строка - Первый номер
         gbc.gridx = 0;
