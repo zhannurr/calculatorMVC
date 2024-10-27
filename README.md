@@ -1,4 +1,4 @@
-# 🧮 My Calculator App 🧮
+# 🧮 My Sweet Calculator App 🧮
 
 Welcome to my adorable Calculator App! 🌟 This little project showcases the Model-View-Controller (MVC) design pattern while providing a simple and user-friendly interface for basic arithmetic operations. 💖
 
@@ -10,11 +10,15 @@ Welcome to my adorable Calculator App! 🌟 This little project showcases the Mo
 
 ## 📜 How It Works
 
-The app is divided into three components:
+The app is divided into three components following the MVC design pattern:
 
-1. **Model (CalculatorModel):** This is where all the calculations happen. It handles the logic for each operation. 💡
-2. **View (CalculatorView):** The charming interface that allows users to input numbers and see results. It's designed to be welcoming and easy to use! 🌈
-3. **Controller (CalculatorController):** The glue that connects the model and view, managing user interactions and updating the interface accordingly. 🎩
+1. **Model (CalculatorModel):** This component handles all the calculations and business logic. It defines the operations and ensures that only valid calculations are performed. For example, it checks for division by zero before performing the division. 💡
+
+2. **View (CalculatorView):** The charming interface that allows users to input numbers and see results. It's designed to be welcoming and easy to use! The view displays the result and communicates errors to the user through friendly pop-up messages. 🌈
+
+3. **Controller (CalculatorController):** The glue that connects the model and view! The controller manages user interactions, responds to button clicks, and updates the view with results or error messages. It ensures that the model's calculations are displayed correctly in the view. 🎩
+
+This separation of concerns helps keep the code organized and maintainable, making it easier to expand the application in the future! 🌟
 
 ## 🚀 Getting Started
 
@@ -38,4 +42,4 @@ Feel free to play around with the app and perform calculations!💕
 
 ---
 
-Feel free to customize it further if you'd like! 😊
+Let me know if you’d like to add anything else! 😊
