@@ -10,6 +10,8 @@ public class CalculatorView extends JFrame {
     private final JButton multiplyButton = new JButton("*");
     private final JButton divideButton = new JButton("/");
     private final JLabel resultLabel = new JLabel("Result: ");
+    private final JLabel firstNumberLabel = new JLabel("First Number:");
+    private final JLabel secondNumberLabel = new JLabel("Second Number:");
 
     public CalculatorView() {
         setTitle("Calculator");
@@ -18,13 +20,36 @@ public class CalculatorView extends JFrame {
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
-
         gbc.insets = new Insets(5, 5, 5, 5);
+
+        // Настройка шрифтов для меток
+        Font labelFont = new Font("arial", Font.BOLD, 20);  // Изменение шрифта для меток
+        firstNumberLabel.setFont(labelFont);
+        secondNumberLabel.setFont(labelFont);
+        resultLabel.setFont(labelFont);
+
+        // Настройка шрифтов для полей ввода и кнопок
+        Font fieldFont = new Font("Arial", Font.PLAIN, 20);
+        firstNumberField.setFont(fieldFont);
+        secondNumberField.setFont(fieldFont);
+
+        Font buttonFont = new Font("Arial", Font.PLAIN, 20);
+        addButton.setFont(buttonFont);
+        subtractButton.setFont(buttonFont);
+        multiplyButton.setFont(buttonFont);
+        divideButton.setFont(buttonFont);
+
+        // Установка предпочтительных размеров кнопок
+        Dimension buttonSize = new Dimension(60, 30);
+        addButton.setPreferredSize(buttonSize);
+        subtractButton.setPreferredSize(buttonSize);
+        multiplyButton.setPreferredSize(buttonSize);
+        divideButton.setPreferredSize(buttonSize);
 
         // Первая строка - Первый номер
         gbc.gridx = 0;
         gbc.gridy = 0;
-        add(new JLabel("First Number:"), gbc);
+        add(firstNumberLabel, gbc); // Добавление метки
 
         gbc.gridx = 1;
         add(firstNumberField, gbc);
@@ -32,7 +57,7 @@ public class CalculatorView extends JFrame {
         // Вторая строка - Второй номер
         gbc.gridx = 0;
         gbc.gridy = 1;
-        add(new JLabel("Second Number:"), gbc);
+        add(secondNumberLabel, gbc); // Добавление метки
 
         gbc.gridx = 1;
         add(secondNumberField, gbc);
