@@ -2,14 +2,19 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CalculatorModel model = new CalculatorModel();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        // Примеры тестов
+        System.out.println("Сложение 5 + 3 = " + model.add(5, 3));
+        System.out.println("Вычитание 10 - 4 = " + model.subtract(10, 4));
+        System.out.println("Умножение 6 * 7 = " + model.multiply(6, 7));
+
+        // Проверка деления
+        try {
+            System.out.println("Деление 20 / 4 = " + model.divide(20, 4));
+            System.out.println("Деление 10 / 0 = " + model.divide(10, 0)); // Должна вызвать исключение
+        } catch (ArithmeticException e) {
+            System.out.println("Ошибка: " + e.getMessage());
         }
     }
 }
