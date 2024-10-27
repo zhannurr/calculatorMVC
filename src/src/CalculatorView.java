@@ -22,7 +22,7 @@ public class CalculatorView extends JFrame {
     // Конструктор класса
     public CalculatorView() {
         // Устанавливаем заголовок окна
-        setTitle("Калькулятор");
+        setTitle("Calculator");
         // Завершаем приложение при закрытии окна
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Устанавливаем размер окна
@@ -106,7 +106,7 @@ public class CalculatorView extends JFrame {
 
     // Метод для отображения результата на экране
     public void setResult(String result) {
-        resultLabel.setText("Результат: " + result); // Обновляем текст метки результата
+        resultLabel.setText("Result: " + result); // Обновляем текст метки результата
     }
 
     // Метод для добавления обработчиков событий для кнопок операций
