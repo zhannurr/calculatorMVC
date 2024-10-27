@@ -1,4 +1,4 @@
-# 🧮 My Sweet Calculator App 🧮
+# 🧮 My Calculator App 🧮
 
 Welcome to my adorable Calculator App! 🌟 This little project showcases the Model-View-Controller (MVC) design pattern while providing a simple and user-friendly interface for basic arithmetic operations. 💖
 
