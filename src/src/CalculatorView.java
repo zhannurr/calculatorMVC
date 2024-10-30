@@ -14,6 +14,7 @@ public class CalculatorView extends JFrame {
     final JButton multiplyButton = new JButton("*"); // Кнопка для умножения
     final JButton divideButton = new JButton("/"); // Кнопка для деления
 
+
     // Метки и результат
     private final JLabel resultLabel = new JLabel("Result: "); // Метка для отображения результата
     private final JLabel firstNumberLabel = new JLabel("First Number:"); // Метка для первого числа
